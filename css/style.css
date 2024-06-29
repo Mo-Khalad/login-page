@@ -1,0 +1,117 @@
+:root{
+    --main_color:rgb(152, 207, 186);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body{
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    position: relative;
+    width:25%;
+    height:50%;
+    min-width:250px;
+    border-radius: 20px;
+    background-color:rgb(10, 10, 10);
+    box-shadow: 2px 2px 20px 5px var(--main_color);
+    padding: 40px;
+    overflow: hidden;
+}
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    transition:1s ease-in-out;
+    border-radius:0.4rem;
+}
+.wrapper.active .form-wrapper.sign-up{
+    transform: translateY(-120%);
+}
+.wrapper.active .form-wrapper.sign-in{
+    transform: translateY(-400px);
+ }
+.wrapper:hover{
+    animation: animate 1s linear infinite;
+}
+@keyframes animate {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+h2{
+    width: 100%;
+    text-align: center;
+    margin-top:0.5rem;
+    color:var(--main_color);
+}
+.input-group{
+    position: relative;
+    width:100%;
+    margin-top:1rem;
+}
+.input-group label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    font-size:0.9rem;
+    transform: translateY(-50%);
+    color:var(--main_color);
+    pointer-events: none;
+    transition: .5s;
+}
+.input-group input{
+    width:100%;
+    height:1rem;
+    font-size:0.8rem;
+    outline: none;
+    background-color:transparent;
+    border: 0;
+    border-bottom: 2px solid #f7f7f7;
+    padding: 0.3rem;
+    color:#f7f7f7;  
+}
+.input-group input:focus~label, 
+.input-group input:valid~label{
+    top: -5px;
+}
+.remember{
+  margin:1rem;
+  width: 100% !important;
+}
+.label-checkbox{
+ color: #f7f7f7;
+ font-size: 16px;
+}
+.checkbox{
+    accent-color:var(--main_color);
+}
+button{
+    background-color:var(--main_color);
+    border: 0;
+    padding:0.8rem;
+    width: 15rem;
+    border-radius:2rem;
+}
+p{
+ color: #f8f8f8;
+ margin-top: 0.4rem;
+}
+a{ 
+    text-decoration: none;
+    font-weight: 500;
+    color:var(--main_color);
+}
+a:hover{
+    text-decoration: underline;
+}
+.sign-up{
+    margin-top: 4rem;
+}
